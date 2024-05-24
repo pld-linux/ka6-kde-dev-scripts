@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.02.2
+%define		kdeappsver	24.05.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kde-dev-scripts
 Summary:	Kde dev scripts
 Name:		ka6-%{kaname}
-Version:	24.02.2
+Version:	24.05.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	85cc3d12be900a67f6e2f09ab7b1c42a
+# Source0-md5:	60f4037a458a73f36d1cd2892569b44a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 
 find $RPM_BUILD_ROOT%{_bindir} -type f -exec sed -i -e 's#/usr/bin/env perl#/usr/bin/perl#' '{}' +
 find $RPM_BUILD_ROOT%{_bindir} -type f -exec sed -i -e 's#/usr/bin/env python3#/usr/bin/python3#' '{}' +
-find $RPM_BUILD_ROOT%{_bindir} -type f -exec sed -i -e 's#/usr/bin/env python#/usr/bin/python2#' '{}' +
+find $RPM_BUILD_ROOT%{_bindir} -type f -exec sed -i -e 's#/usr/bin/env python#/usr/bin/python3#' '{}' +
 find $RPM_BUILD_ROOT%{_bindir} -type f -exec sed -i -e 's#/usr/bin/env bash#/bin/bash#' '{}' +
 
 %clean
