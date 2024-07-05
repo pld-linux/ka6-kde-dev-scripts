@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.1
+%define		kdeappsver	24.05.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kde-dev-scripts
 Summary:	Kde dev scripts
 Name:		ka6-%{kaname}
-Version:	24.05.1
+Version:	24.05.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	0ea56867d73bf8733c72a6d2644b05d4
+# Source0-md5:	5040e3d5480f267012563ce325727069
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
@@ -308,6 +308,21 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ru) %{_mandir}/ru/man1/fixincludes.1*
 %lang(ru) %{_mandir}/ru/man1/pruneemptydirs.1*
 %lang(ru) %{_mandir}/ru/man1/zonetab2pot.py.1*
+%lang(sl) %{_mandir}/sl/man1/adddebug.1*
+%lang(sl) %{_mandir}/sl/man1/cheatmake.1*
+%lang(sl) %{_mandir}/sl/man1/create_cvsignore.1*
+%lang(sl) %{_mandir}/sl/man1/create_makefile.1*
+%lang(sl) %{_mandir}/sl/man1/create_makefiles.1*
+%lang(sl) %{_mandir}/sl/man1/cvscheck.1*
+%lang(sl) %{_mandir}/sl/man1/cvslastchange.1*
+%lang(sl) %{_mandir}/sl/man1/cvslastlog.1*
+%lang(sl) %{_mandir}/sl/man1/cvsrevertlast.1*
+%lang(sl) %{_mandir}/sl/man1/cxxmetric.1*
+%lang(sl) %{_mandir}/sl/man1/extend_dmalloc.1*
+%lang(sl) %{_mandir}/sl/man1/extractrc.1*
+%lang(sl) %{_mandir}/sl/man1/fixincludes.1*
+%lang(sl) %{_mandir}/sl/man1/pruneemptydirs.1*
+%lang(sl) %{_mandir}/sl/man1/zonetab2pot.py.1*
 %lang(sv) %{_mandir}/sv/man1/adddebug.1*
 %lang(sv) %{_mandir}/sv/man1/cheatmake.1*
 %lang(sv) %{_mandir}/sv/man1/create_cvsignore.1*
