@@ -8,7 +8,7 @@
 Summary:	Kde dev scripts
 Name:		ka6-%{kaname}
 Version:	24.12.2
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -27,7 +27,7 @@ BuildRequires:	xz
 Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_debugsource_packages	0
+%global		debug_package	%{nil}
 
 %description
 Scripts and setting files useful during development of KDE software.
