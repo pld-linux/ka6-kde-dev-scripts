@@ -2,8 +2,8 @@
 # Conditional build:
 %bcond_with	tests		# build with tests
 %define		kdeappsver	25.08.2
-%define		kframever	5.94.0
-%define		qtver		5.15.2
+%define		kframever	6.4.0
+%define		qtver		6.7
 %define		kaname		kde-dev-scripts
 Summary:	Kde dev scripts
 Name:		ka6-%{kaname}
@@ -16,15 +16,12 @@ Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kan
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
-BuildRequires:	gettext-devel
 BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf6-kdoctools-devel >= %{kframever}
 BuildRequires:	ninja
-BuildRequires:	qt6-build >= %{qtver}
-BuildRequires:	rpmbuild(macros) >= 1.164
-BuildRequires:	shared-mime-info
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-%requires_eq_to Qt6Core Qt6Core-devel
 Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
