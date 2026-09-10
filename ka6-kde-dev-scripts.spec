@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.08.0
+%define		kdeappsver	26.08.1
 %define		kframever	6.4.0
 %define		qtver		6.7
 %define		kaname		kde-dev-scripts
 Summary:	Kde dev scripts
 Name:		ka6-%{kaname}
-Version:	26.08.0
+Version:	26.08.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	312c8063dbcc3e8fd5f491a44fdc1be0
+# Source0-md5:	1a966e284ca0e1062c5ad4c277d35668
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
